@@ -25,19 +25,19 @@ namespace Infrastructure.Data
 
             if (!string.IsNullOrWhiteSpace(brand))
             {
-                query = query.Where(p => p.Brand == brand);
+                query = query.Where(x => x.Brand == brand);
             }
 
             if (!string.IsNullOrWhiteSpace(type))
             {
-                query = query.Where(p => p.Type == type);
+                query = query.Where(x => x.Type == type);
             }
 
                 query = sort switch
                 {
-                    "priceAsc" => query.OrderBy(p => p.Price),
-                    "priceDesc" => query.OrderByDescending(p => p.Price),
-                    _ => query.OrderBy(p => p.Name)
+                    "priceAsc" => query.OrderBy(x => x.Price),
+                    "priceDesc" => query.OrderByDescending(x => x.Price),
+                    _ => query.OrderBy(x => x.Name)
                 };
             
 
@@ -57,6 +57,7 @@ namespace Infrastructure.Data
         {
             return await context.Products.FindAsync(id);
         }
+
         public async Task<IReadOnlyList<string>> GetTypesAsync()
         {
             return await context.Products.Select(x =>x.Type)
@@ -68,6 +69,8 @@ namespace Infrastructure.Data
         {
             return context.Products.Any(x => x.Id == id);
         }
+
+    
 
         public async Task<bool> SaveChangesAsync()
         {
