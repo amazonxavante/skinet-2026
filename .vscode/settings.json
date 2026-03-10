@@ -1,1 +1,10 @@
-{}
+{
+    "launch": {
+
+        "configurations": [],
+        "compounds": [],
+        "scss.validate": false,
+    }
+
+    
+}
