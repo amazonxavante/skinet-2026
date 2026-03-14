@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import {MatCardModule} from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
 
 
@@ -13,6 +13,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatIconModule,
     MatButtonModule,
     MatBadgeModule,
+    MatCardModule,
+  
   
   
     
