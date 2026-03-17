@@ -12,6 +12,7 @@ import { ShopParams } from '../../shared/models/shopParams';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { Pagination } from '../../shared/models/pagination';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -28,7 +29,8 @@ import { Pagination } from '../../shared/models/pagination';
     MatMenuTrigger,
     MatPaginatorModule,
     FormsModule,
-    MatIconButton
+    MatIconButton,
+    RouterModule
 ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',

@@ -11,3 +11,16 @@
   width: 32px;
   height: 32px; 
 }
+
+
+nav a{
+  cursor:pointer;
+  padding:6px 8px;
+}
+
+a{
+  &.active{
+    color:#7d00fa;
+  }
+}
+

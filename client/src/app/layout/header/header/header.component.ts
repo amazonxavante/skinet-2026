@@ -3,6 +3,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
+import{MatFormFieldModule} from '@angular/material/form-field';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+
 
 
 
@@ -14,11 +17,14 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatButtonModule,
     MatBadgeModule,
     MatCardModule,
-  
-  
-  
+    MatIconModule,
+    MatIconModule,
+    MatFormFieldModule,
+    RouterModule,
+    RouterLink,
+    RouterLinkActive,
     
-  ],
+],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
