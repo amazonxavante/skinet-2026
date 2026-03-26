@@ -17,3 +17,18 @@
 }
 
 
+.snack-error{
+   @include mat.snack-bar-overrides((
+    button-color: white,
+    container-color: red,
+    supporting-text-color:white
+  ));
+}
+
+.snack-success{
+   @include mat.snack-bar-overrides((
+    button-color: orange,
+    container-color: green,
+    supporting-text-color:white
+  ));
+}

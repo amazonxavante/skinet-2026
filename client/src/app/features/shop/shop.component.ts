@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import {  Component, inject, OnInit } from '@angular/core';
 import { ShopService } from '../../core/services/shop.service';
 import { Product } from '../../shared/models/product';
 import { ProductItemComponent } from "./product-item/product-item.component";
@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 
 
 
+
+
 @Component({
   selector: 'app-shop',
   standalone: true,
@@ -30,11 +32,15 @@ import { RouterModule } from '@angular/router';
     MatPaginatorModule,
     FormsModule,
     MatIconButton,
-    RouterModule
+    RouterModule,
+  
+    
 ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
 })
+
+
 
 export class ShopComponent implements OnInit {
 

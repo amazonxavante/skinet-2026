@@ -1,6 +1,6 @@
-import { Component, inject, OnInit  } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from "./layout/header/header/header.component";
-import { ShopComponent } from "./features/shop/shop.component";
+
 import {  RouterOutlet } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import {  RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [
     HeaderComponent,
-     ShopComponent,
+    
      RouterOutlet
     ],
   templateUrl: './app.component.html',
