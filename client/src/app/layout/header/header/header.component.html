@@ -11,15 +11,19 @@
         [routerLinkActiveOptions]="{exact: true}" 
         class="hover:text-primary">Home</a>
 
-      <a routerLink="/shop" routerLinkActive="active"  class="hover:text-primary">Shop</a>
-      <a routerLink="/test-error" routerLinkActive="active" class="hover:text-primary">Errors</a>
+      <a routerLink="/shop" routerLinkActive="active" class="hover:text-primary font-semibold">Shop</a>
+      <a routerLink="/test-error" routerLinkActive="active" class="hover:text-primary font-semibold">Errors</a>
+      <a routerLink="/about" routerLinkActive="active" class="hover:text-primary font-semibold">About</a>
     </nav>
 
     <!-- Right Actions -->
     <div class="flex items-center gap-3">
 
       <!-- Cart -->
-      <a matBadge="5" matBadgeSize="large" class="custom-badge">
+      <a routerLink="/cart" routerLinkActive="active" 
+         matBadge="{{cartService.itemCount()}}" 
+         matBadgeSize="large"
+          class="custom-badge">
         <mat-icon>shopping_cart</mat-icon>
       </a>
 
