@@ -1,6 +1,5 @@
 <div class="mx-auto max-w-4xl w-full space-y-6">
-  <div class="space-y-4 rounded-lg border border-gray-200 p-4 bg-white shadow-sm">
-    
+  <div class="space-y-4 rounded-lg border border-gray-200 p-4 bg-white shadow-sm">  
     <p class="text-xl font-semibold">Order Summary</p>
 
     <div class="space-y-4">
@@ -39,10 +38,13 @@
       </dl>
 
     </div>
-    <div class="flex flex-col gap-2">
+    @if (location.path() !== '/checkout') {
+        <div class="flex flex-col gap-2">
         <button type="button" routerLink="/checkout" mat-flat-button>Checkout</button>
         <button type="button" routerLink="/shop" mat-button>Continue Shopping</button>
     </div>
+
+    }
 
   </div>
   <div class="space-y-4 rounded-lg border border-gray-200 bg-white shadow-sm">
@@ -55,7 +57,7 @@
             <input type="text" matInput>
         </mat-form-field>
 
-        <button type="button" mat-button>Apply Code</button>
+        <button type="button" mat-button class="bg-blue-700 text-white">Apply Code</button>
 
     </form>
   </div>

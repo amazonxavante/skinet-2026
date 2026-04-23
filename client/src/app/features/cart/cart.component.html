@@ -1,6 +1,5 @@
 <section>
-  @if(cartService.cart()?.items?.length! > 0) {
-      <div class="mx-auto max-w-screen-xl px-4">  
+  @if(cartService.cart()?.items?.length! > 0) { 
     <div class="flex flex-col lg:flex-row w-full items-start gap-6 mt-10 lg:mt-32">
 
       <!-- Cart Items -->
@@ -16,10 +15,6 @@
       </div>
 
     </div>
-
-  </div>
-
-
 
   }@else {
     <app-empty-state></app-empty-state>
