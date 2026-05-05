@@ -23,6 +23,8 @@ namespace Infrastructure.Data
         {
             var query = context.Products.AsQueryable();
 
+            
+
             if (!string.IsNullOrWhiteSpace(brand))
             {
                 query = query.Where(x => x.Brand == brand);
