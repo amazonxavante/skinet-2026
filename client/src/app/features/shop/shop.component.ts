@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { Pagination } from '../../shared/models/pagination';
 import { RouterModule } from '@angular/router';
+import { EmptyStateComponent } from "../../shared/components/empty-state/empty-state.component";
 
 
 
@@ -33,8 +34,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     MatIconButton,
     RouterModule,
-  
-    
+    EmptyStateComponent
 ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
@@ -55,6 +55,7 @@ export class ShopComponent implements OnInit {
     { name:'Price:High-Low', value: 'priceDesc'}
   ];
 
+
   shopParams = new ShopParams();
   pageSizeOptions = [5,10,15,20]
   
@@ -66,6 +67,11 @@ export class ShopComponent implements OnInit {
   initializeShop(){ 
     this.shopService.getBrands();
     this.shopService.getTypes();
+    this.getProducts();
+  }
+
+  resetFilters(){
+    this.shopParams = new ShopParams();
     this.getProducts();
   }
 
