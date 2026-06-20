@@ -1,4 +1,4 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Address, User } from '../../shared/models/user';
@@ -14,6 +14,13 @@ baseUrl = environment.apiUrl;
  private readonly http = inject(HttpClient);
  private readonly signalrService = inject (SignalrService);
  currentyUser = signal<User | null>(null);
+ isAdmin = computed(() => {
+  const roles = this.currentyUser()?. roles;
+  return Array.isArray(roles) ? roles.includes('Admin') : roles === 'Admin';
+
+ });
+ 
+ 
 
 
 

@@ -3,7 +3,7 @@
         <div class="px-4 w-full">
             <div class="flex justify-between items-center align-middle">
                 <h2 class="text-2xl text-center font-semibold">Order Summary for order #{{ order.id }}</h2>
-                <button type="button" routerLink="/orders" mat-stroked-button>Back to Orders</button>
+                <button type="button" (click)="onReturnClick()" mat-stroked-button>{{buttonText}}</button>
 
             </div>
             

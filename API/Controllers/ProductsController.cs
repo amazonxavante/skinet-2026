@@ -5,6 +5,7 @@ using Core.Interfaces;
 using Core.Specifications;
 using Infrastructure;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -37,6 +38,8 @@ namespace API.Controllers;
             return product;
         }
 
+        [Authorize(Roles = "Admin")]
+        
         [HttpPost]
         public async Task<ActionResult<Product>> CreateProduct(Product product)
         {
@@ -50,6 +53,8 @@ namespace API.Controllers;
             return BadRequest("Failed to create product");
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id:int}")]
         public async Task<ActionResult> UpdateProduct(int id, Product product)
         {
@@ -67,7 +72,7 @@ namespace API.Controllers;
         }
 
 
-
+        
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> DeleteProduct(int id)
         {

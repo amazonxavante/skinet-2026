@@ -161,5 +161,14 @@
     "Type": "Boots",
     "Brand": "Angular",
     "QuantityInStock": 27
+  },
+  {
+    "Name": "Apiario Ozoraide Boots",
+    "Description": "For 35 years, Apiário Ozoraide has been supplying the richest and healthiest honey in São Paulo..",
+    "Price": 340,
+    "PictureUrl": "/images/products/apiario_logo.jpg",
+    "Type": "Boots",
+    "Brand": "Angular",
+    "QuantityInStock": 27
   }
 ]

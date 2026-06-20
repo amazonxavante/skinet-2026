@@ -16,6 +16,8 @@ import { CheckoutSuccessComponent } from './features/checkout/checkout-success/c
 import { OrderComponent } from './features/orders/order.component';
 import { OrderDetailedComponent } from './features/orders/order-detailed/order-detailed.component';
 import { orderCompleteGuard } from './core/guards/order-complete-guard';
+import { AdminComponent } from './features/admin/admin.component';
+import { adminGuard } from './core/guards/admin-guard';
 
 
 export const routes: Routes = [ 
@@ -24,16 +26,16 @@ export const routes: Routes = [
   {path: 'shop/:id', component: ProductDetailsComponent},
   {path: 'cart', component:CartComponent},
   {path: 'checkout',component:CheckoutComponent, canActivate: [authGuard, emptyCartGuard]},
-  {path: 'checkout/success',component:CheckoutSuccessComponent,
-     canActivate: [authGuard, orderCompleteGuard]},
+  {path: 'checkout/success',component:CheckoutSuccessComponent, canActivate: [authGuard, orderCompleteGuard]},
   {path: 'orders',component:OrderComponent, canActivate: [authGuard]},
   {path: 'orders/:id',component:OrderDetailedComponent, canActivate: [authGuard]},
   {path: 'account/register',component:RegisterComponent},
   {path: 'account/login',component:LoginComponent},
   {path: 'test-error', component: TestErrorComponent},
-  {path: 'not-found', component: NotFoundComponent},
   {path: 'serve-error', component: ServeErrorComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'admin', component: AdminComponent, canActivate: [authGuard, adminGuard] },
+  {path: 'not-found', component: NotFoundComponent},
   {path: '**', redirectTo:'not-found',pathMatch:'full' },
       
  
