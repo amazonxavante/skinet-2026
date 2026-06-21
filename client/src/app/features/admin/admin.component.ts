@@ -28,7 +28,6 @@ import { DialogService } from '../../core/services/dialog.service';
     MatIconModule,
     DatePipe,
     RouterLink,
-    MatLabel,
     MatSelectModule,
     CurrencyPipe,
     MatTabsModule,
